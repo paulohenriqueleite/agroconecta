@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | AgroConecta</title>
+  <meta name="description" content="Catálogo de produtos direto do produtor: busque, monte seu pedido e veja quanto economiza.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🌱 AgroConecta</a>
+
+      <button type="button" id="menu-botao" class="menu-botao" aria-expanded="false" aria-controls="menu-lista">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-lista" class="menu" aria-label="Menu principal">
+        <a href="index.html">Home</a>
+        <a href="produtos.html" aria-current="page">Produtos</a>
+        <a href="safra.html">Safra</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="fale-conosco.html">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="topo-pagina" aria-labelledby="produtos-titulo">
+      <div class="container">
+        <span class="tag">🛒 Catálogo</span>
+        <h1 id="produtos-titulo">Produtos direto do produtor</h1>
+        <p>Busque o que precisa, monte seu pedido e veja na hora quanto você economiza comprando sem intermediários.</p>
+      </div>
+    </section>
+
+    <section class="sem-topo" aria-label="Catálogo de produtos">
+      <div class="container catalogo">
+        <div>
+          <form class="barra-busca" role="search" aria-label="Buscar produtos">
+            <div class="campo">
+              <label for="busca">Buscar produto ou produtor</label>
+              <input type="search" id="busca" placeholder="Ex.: tomate, Seu João...">
+            </div>
+            <div class="campo">
+              <label for="categoria">Categoria</label>
+              <select id="categoria">
+                <option value="todas">Todas</option>
+                <option value="Hortaliças">Hortaliças</option>
+                <option value="Frutas">Frutas</option>
+                <option value="Grãos">Grãos</option>
+                <option value="Raízes">Raízes</option>
+                <option value="Ovos">Ovos</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="filtros-botoes" role="group" aria-label="Mostrar só excedentes">
+            <button type="button" class="filtro-btn" id="so-excedentes" aria-pressed="false">🤝 Só excedentes com desconto</button>
+          </div>
+
+          <p class="contador" id="contador-produtos" aria-live="polite"></p>
+          <p class="mensagem" id="aviso-catalogo" role="status" aria-live="polite"></p>
+          <ul class="lista-produtos" id="lista-produtos" aria-label="Produtos disponíveis"></ul>
+        </div>
+
+        <aside class="pedido" aria-labelledby="pedido-titulo">
+          <h2 id="pedido-titulo">Seu pedido</h2>
+          <p class="texto-apoio" id="pedido-vazio">Nenhum item ainda. Adicione produtos do catálogo.</p>
+          <ul class="itens-pedido" id="itens-pedido"></ul>
+          <dl class="resumo">
+            <div class="total"><dt>Total</dt><dd id="resumo-total">R$ 0,00</dd></div>
+            <div class="economia"><dt>Você economiza</dt><dd id="resumo-economia">R$ 0,00</dd></div>
+            <div><dt>Produtores atendidos</dt><dd id="resumo-produtores">0</dd></div>
+          </dl>
+          <button type="button" class="btn btn-green" id="finalizar" disabled>Finalizar pedido</button>
+          <p class="mensagem" id="aviso-pedido" role="status" aria-live="polite" tabindex="-1"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <strong>🌱 AgroConecta</strong>
+        <p>Projeto alinhado à ODS 2: Fome Zero e Agricultura Sustentável.</p>
+        <p>Grupo 32 · FIAP 2026</p>
+      </div>
+      <ul class="rodape-integrantes" aria-label="Integrantes do grupo">
+          <li>Paulo Henrique Ferreira Leite (RM 576170)</li>
+          <li>Paulo Henrik Moura da Silva (RM 575374)</li>
+          <li>Paulo Sérgio Alves de Oliveira (RM 574413)</li>
+          <li>Rafael Coutinho Timoteo (RM 576366)</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/produtos-dados.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

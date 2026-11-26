@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safra do Produtor | AgroConecta</title>
+  <meta name="description" content="Acompanhe a colheita dos agricultores familiares e garanta produtos frescos com antecedência.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🌱 AgroConecta</a>
+
+      <button type="button" id="menu-botao" class="menu-botao" aria-expanded="false" aria-controls="menu-lista">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-lista" class="menu" aria-label="Menu principal">
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="safra.html" aria-current="page">Safra</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="fale-conosco.html">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="topo-pagina" aria-labelledby="safra-titulo">
+      <div class="container">
+        <span class="tag">🌾 Safra</span>
+        <h1 id="safra-titulo">Safra do Produtor Rural</h1>
+        <p>Acompanhe a colheita dos agricultores familiares e garanta produtos frescos, direto da origem e com antecedência.</p>
+      </div>
+    </section>
+
+    <section class="sem-topo" aria-label="Lista de safras">
+      <div class="container">
+        <div class="filtros-botoes" role="group" aria-label="Filtrar safras por categoria">
+          <button type="button" class="filtro-btn" data-filtro="todos" aria-pressed="true">Todas as safras</button>
+          <button type="button" class="filtro-btn" data-filtro="hortalicas" aria-pressed="false">Hortaliças</button>
+          <button type="button" class="filtro-btn" data-filtro="frutas" aria-pressed="false">Frutas</button>
+          <button type="button" class="filtro-btn" data-filtro="graos" aria-pressed="false">Grãos e raízes</button>
+        </div>
+        <p class="contador" id="safra-contador" aria-live="polite">Mostrando 6 safras</p>
+
+        <div class="grade grade-3" id="lista-safras">
+          <article class="card safra-card" data-categoria="hortalicas">
+            <span class="selo">Colheita próxima</span>
+            <h2 class="h3-card">Hortaliças orgânicas</h2>
+            <p class="local">📍 Seu João (Ceilândia - DF)</p>
+            <p>Alface americana e rúcula fresca, cultivadas sem agrotóxicos.</p>
+            <div class="card-rodape"><span>Previsão: <strong>15/12/2026</strong></span><span class="quantidade">500 maços</span></div>
+          </article>
+
+          <article class="card safra-card" data-categoria="hortalicas">
+            <span class="selo">Colheita ativa</span>
+            <h2 class="h3-card">Tomate italiano fresco</h2>
+            <p class="local">📍 Sítio Boa Vista (Planaltina - DF)</p>
+            <p>Lote ideal para molhos e pratos de restaurante.</p>
+            <div class="card-rodape"><span>Previsão: <strong>Imediata</strong></span><span class="quantidade">1.200 kg</span></div>
+          </article>
+
+          <article class="card safra-card" data-categoria="graos">
+            <span class="selo selo-ambar">Planejamento</span>
+            <h2 class="h3-card">Mandioca selecionada</h2>
+            <p class="local">📍 Coop. Agrofamiliar (Brazlândia - DF)</p>
+            <p>Abastecimento contínuo planejado para mercados e feirantes locais.</p>
+            <div class="card-rodape"><span>Previsão: <strong>Janeiro/2027</strong></span><span class="quantidade">3.000 kg</span></div>
+          </article>
+
+          <article class="card safra-card" data-categoria="frutas">
+            <span class="selo">Colheita próxima</span>
+            <h2 class="h3-card">Morango orgânico</h2>
+            <p class="local">📍 Dona Maria (Fercal - DF)</p>
+            <p>Frutas frescas e graúdas para confeitarias e quitandas.</p>
+            <div class="card-rodape"><span>Previsão: <strong>20/12/2026</strong></span><span class="quantidade">300 kg</span></div>
+          </article>
+
+          <article class="card safra-card" data-categoria="graos">
+            <span class="selo">Colheita ativa</span>
+            <h2 class="h3-card">Milho verde</h2>
+            <p class="local">📍 Sítio Alvorada (Paranoá - DF)</p>
+            <p>Espigas selecionadas e bem doces, ideais para pamonharias e comércios.</p>
+            <div class="card-rodape"><span>Previsão: <strong>Imediata</strong></span><span class="quantidade">800 kg</span></div>
+          </article>
+
+          <article class="card safra-card" data-categoria="frutas">
+            <span class="selo selo-ambar">Planejamento</span>
+            <h2 class="h3-card">Abacate manteiga</h2>
+            <p class="local">📍 Pomar Família Souza (Sobradinho - DF)</p>
+            <p>Lotes grandes de abacates cremosos para mercados da cidade.</p>
+            <div class="card-rodape"><span>Previsão: <strong>Final de dezembro</strong></span><span class="quantidade">1.500 kg</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <strong>🌱 AgroConecta</strong>
+        <p>Projeto alinhado à ODS 2: Fome Zero e Agricultura Sustentável.</p>
+        <p>Grupo 32 · FIAP 2026</p>
+      </div>
+      <ul class="rodape-integrantes" aria-label="Integrantes do grupo">
+          <li>Paulo Henrique Ferreira Leite (RM 576170)</li>
+          <li>Paulo Henrik Moura da Silva (RM 575374)</li>
+          <li>Paulo Sérgio Alves de Oliveira (RM 574413)</li>
+          <li>Rafael Coutinho Timoteo (RM 576366)</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/safra.js"></script>
+</body>
+</html>

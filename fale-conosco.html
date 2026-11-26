@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco | AgroConecta</title>
+  <meta name="description" content="Fale com a equipe do AgroConecta: tire dúvidas, envie sugestões e conte como podemos ajudar.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🌱 AgroConecta</a>
+
+      <button type="button" id="menu-botao" class="menu-botao" aria-expanded="false" aria-controls="menu-lista">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-lista" class="menu" aria-label="Menu principal">
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="safra.html">Safra</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="fale-conosco.html" aria-current="page">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="topo-pagina" aria-labelledby="contato-titulo">
+      <div class="container container-estreito">
+        <span class="tag">✉️ Contato</span>
+        <h1 id="contato-titulo">Fale Conosco</h1>
+        <p>Tem alguma dúvida ou sugestão? Preencha o formulário e conte como podemos ajudar.</p>
+      </div>
+    </section>
+
+    <section class="sem-topo" aria-label="Formulário de contato">
+      <div class="container container-estreito">
+        <!-- novalidate: quem confere os campos é o JavaScript (js/contato.js) -->
+        <form id="contato-form" class="form" novalidate>
+          <p class="dica">Campos com <span class="obrigatorio" aria-hidden="true">*</span> são obrigatórios.</p>
+
+          <div class="campo">
+            <label for="nome">Nome completo <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Souza" autocomplete="name" aria-describedby="erro-nome">
+            <p class="erro" id="erro-nome" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Ex.: nome@exemplo.com" autocomplete="email" aria-describedby="erro-email">
+            <p class="erro" id="erro-email" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone (opcional)</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Ex.: (11) 91234-5678" autocomplete="tel" aria-describedby="erro-telefone">
+            <p class="erro" id="erro-telefone" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="perfil">Você é <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <select id="perfil" name="perfil" aria-describedby="erro-perfil">
+              <option value="">Selecione uma opção</option>
+              <option value="produtor">Produtor</option>
+              <option value="comprador">Comprador</option>
+              <option value="ong">ONG</option>
+            </select>
+            <p class="erro" id="erro-perfil" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="assunto">Assunto <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <input type="text" id="assunto" name="assunto" placeholder="Ex.: Dúvida sobre pedidos" aria-describedby="erro-assunto">
+            <p class="erro" id="erro-assunto" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem <span class="obrigatorio" aria-hidden="true">*</span></label>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte como podemos ajudar" aria-describedby="contador-mensagem erro-mensagem"></textarea>
+            <p class="dica" id="contador-mensagem">0 de 500 caracteres</p>
+            <p class="erro" id="erro-mensagem" aria-live="polite"></p>
+          </div>
+
+          <div>
+            <button type="submit" class="btn btn-green">Enviar mensagem</button>
+          </div>
+
+          <p id="contato-mensagem" class="mensagem" role="status" aria-live="polite" tabindex="-1"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <strong>🌱 AgroConecta</strong>
+        <p>Projeto alinhado à ODS 2: Fome Zero e Agricultura Sustentável.</p>
+        <p>Grupo 32 · FIAP 2026</p>
+      </div>
+      <ul class="rodape-integrantes" aria-label="Integrantes do grupo">
+          <li>Paulo Henrique Ferreira Leite (RM 576170)</li>
+          <li>Paulo Henrik Moura da Silva (RM 575374)</li>
+          <li>Paulo Sérgio Alves de Oliveira (RM 574413)</li>
+          <li>Rafael Coutinho Timoteo (RM 576366)</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+</html>

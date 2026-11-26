@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início | AgroConecta</title>
+  <meta name="description" content="O AgroConecta liga produtores e compradores, com menos intermediários e menos desperdício.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🌱 AgroConecta</a>
+
+      <button type="button" id="menu-botao" class="menu-botao" aria-expanded="false" aria-controls="menu-lista">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-lista" class="menu" aria-label="Menu principal">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="safra.html">Safra</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="fale-conosco.html">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- APRESENTAÇÃO -->
+    <section class="hero" aria-labelledby="destaque-titulo">
+      <div class="container hero-conteudo">
+        <div>
+          <span class="tag">🌾 Do campo direto para a sua mesa</span>
+          <h1 id="destaque-titulo">Do campo direto para a sua cozinha</h1>
+          <p class="hero-destaque">Menos intermediários, menos desperdício.</p>
+          <p class="hero-texto">Muita comida se perde entre o campo e a mesa. Aqui, produtores rurais vendem direto para restaurantes, feirantes e ONGs, impulsionando a agricultura sustentável.</p>
+          <div class="hero-botoes">
+            <a href="produtos.html" class="btn btn-green">Ver produtos</a>
+            <a href="fale-conosco.html" class="link">Fale conosco →</a>
+          </div>
+        </div>
+        <div class="hero-imagem">
+          <img src="dist/img/home/joao-mariana.webp" alt="Ilustração do produtor Seu João e da compradora Mariana" width="800" height="600">
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIXA DE DIFERENCIAIS -->
+    <div class="faixa">
+      <div class="container faixa-conteudo">
+        <p>Alinhado à ODS 2: Fome Zero e Agricultura Sustentável.</p>
+        <ul>
+          <li>✓ Cadeia curta</li>
+          <li>✓ Preço justo</li>
+          <li>✓ Descarte Zero</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PITCH VÍDEO -->
+    <!-- TROCAR o endereço abaixo pelo vídeo da Sprint 4 quando ele estiver pronto -->
+    <section class="secao-branca" aria-labelledby="video-titulo">
+      <div class="container container-estreito">
+        <div class="secao-titulo">
+          <span class="tag">Apresentação do projeto</span>
+          <h2 id="video-titulo">Pitch Vídeo</h2>
+        </div>
+        <div class="video-box">
+          <iframe
+            src="https://www.youtube.com/embed/-s9FRz7O9SU"
+            title="Pitch Vídeo do AgroConecta"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+        <p class="video-link">Prefere assistir direto na plataforma? <a href="https://youtu.be/-s9FRz7O9SU" target="_blank" rel="noopener">Assistir no YouTube</a></p>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section aria-labelledby="como-funciona-titulo">
+      <div class="container">
+        <div class="secao-titulo">
+          <span class="tag">Processo simples</span>
+          <h2 id="como-funciona-titulo">Como funciona</h2>
+          <p>Conectamos toda a cadeia produtiva em poucos passos.</p>
+        </div>
+        <div class="grade grade-3">
+          <article class="card">
+            <div class="icone" aria-hidden="true">🌱</div>
+            <h3>Produtor cadastra a colheita</h3>
+            <p>Quem planta anuncia o que colheu de forma rápida e prática, mesmo sem internet.</p>
+          </article>
+          <article class="card">
+            <div class="icone" aria-hidden="true">🛒</div>
+            <h3>Comprador encontra no catálogo</h3>
+            <p>Restaurantes e feirantes encontram alimentos frescos de produtores próximos.</p>
+          </article>
+          <article class="card">
+            <div class="icone" aria-hidden="true">🤝</div>
+            <h3>Sobra vira doação: Descarte Zero</h3>
+            <p>O que não foi vendido segue de forma segura para ONGs que atendem quem mais precisa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- A PLATAFORMA -->
+    <section class="secao-clara" aria-labelledby="plataforma-titulo">
+      <div class="container">
+        <div class="secao-titulo">
+          <span class="tag">A plataforma</span>
+          <h2 id="plataforma-titulo">Uma conexão inteligente para toda a cadeia</h2>
+        </div>
+        <div class="grade grade-3">
+          <article class="card">
+            <div class="icone" aria-hidden="true">📱</div>
+            <h3>Vitrine que funciona offline</h3>
+            <p>O produtor cadastra safras, quantidades e preços sem internet. Quando a conexão volta, tudo é sincronizado.</p>
+          </article>
+          <article class="card">
+            <div class="icone" aria-hidden="true">📍</div>
+            <h3>Produtores perto de você</h3>
+            <p>A localização aproxima produtores e restaurantes, priorizando quem está mais perto.</p>
+          </article>
+          <article class="card">
+            <div class="icone" aria-hidden="true">🚚</div>
+            <h3>Entrega compartilhada</h3>
+            <p>Pedidos da mesma região seguem juntos na mesma rota, e o frete fica mais barato.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACTO -->
+    <section aria-labelledby="impacto-titulo">
+      <div class="container impacto">
+        <div>
+          <span class="tag">Impacto socioeconômico</span>
+          <h2 id="impacto-titulo">Mais renda no campo. Mais eficiência na cidade.</h2>
+          <p class="texto-apoio">Ao tirar intermediários do caminho, o AgroConecta fortalece a agricultura familiar e facilita o acesso a alimentos frescos.</p>
+          <p class="destaque-borda">Alinhado à Meta 2.3 dos Objetivos de Desenvolvimento Sustentável da ONU.</p>
+        </div>
+        <div class="metricas">
+          <div class="metrica metrica-escura"><strong>Até 40%</strong><p>a mais na margem de lucro do produtor.</p></div>
+          <div class="metrica metrica-verde"><strong>Até 20%</strong><p>a menos no custo de compra dos restaurantes.</p></div>
+          <div class="metrica metrica-clara"><strong>30%</strong><p>a menos de desperdício na colheita e no transporte.</p></div>
+          <div class="metrica metrica-suave"><strong>+ acesso</strong><p>a mercados locais para pequenos produtores.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <strong>🌱 AgroConecta</strong>
+        <p>Projeto alinhado à ODS 2: Fome Zero e Agricultura Sustentável.</p>
+        <p>Grupo 32 · FIAP 2026</p>
+      </div>
+      <ul class="rodape-integrantes" aria-label="Integrantes do grupo">
+          <li>Paulo Henrique Ferreira Leite (RM 576170)</li>
+          <li>Paulo Henrik Moura da Silva (RM 575374)</li>
+          <li>Paulo Sérgio Alves de Oliveira (RM 574413)</li>
+          <li>Rafael Coutinho Timoteo (RM 576366)</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

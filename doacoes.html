@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doações - Descarte Zero | AgroConecta</title>
+  <meta name="description" content="Descarte Zero: alimentos que não foram vendidos são doados para ONGs em vez de irem para o lixo.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🌱 AgroConecta</a>
+
+      <button type="button" id="menu-botao" class="menu-botao" aria-expanded="false" aria-controls="menu-lista">
+        ☰ Menu
+      </button>
+
+      <nav id="menu-lista" class="menu" aria-label="Menu principal">
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="safra.html">Safra</a>
+        <a href="doacoes.html" aria-current="page">Doações</a>
+        <a href="fale-conosco.html">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="topo-pagina" aria-labelledby="doacoes-titulo">
+      <div class="container">
+        <span class="tag">🤝 Descarte Zero</span>
+        <h1 id="doacoes-titulo">Descarte Zero</h1>
+        <p>Alimentos que não foram vendidos são doados para ONGs, em vez de irem para o lixo.</p>
+      </div>
+    </section>
+
+    <section class="sem-topo" aria-labelledby="como-doacao-titulo">
+      <div class="container">
+        <h2 id="como-doacao-titulo">Como funciona</h2>
+        <div class="grade grade-3">
+          <article class="card">
+            <div class="icone" aria-hidden="true">🌱</div>
+            <h3>O produtor marca a sobra</h3>
+            <p>O produtor marca como doação o que não foi vendido.</p>
+          </article>
+          <article class="card">
+            <div class="icone" aria-hidden="true">📋</div>
+            <h3>A ONG reserva</h3>
+            <p>A ONG escolhe a doação e faz a reserva pelo site.</p>
+          </article>
+          <article class="card">
+            <div class="icone" aria-hidden="true">🚜</div>
+            <h3>Retirada na propriedade</h3>
+            <p>A ONG retira os alimentos direto na propriedade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-clara" aria-labelledby="disponiveis-titulo">
+      <div class="container">
+        <h2 id="disponiveis-titulo">Doações disponíveis</h2>
+        <p class="texto-apoio">Para reservar, fale com a gente pelo formulário. O assunto já vem preenchido.</p>
+        <div class="grade grade-3">
+          <article class="card doacao">
+            <img src="img/doacoes/alface.jpg" alt="Pés de alface crespa" width="800" height="600" loading="lazy">
+            <h3>Alface crespa</h3>
+            <ul>
+              <li><strong>Quantidade:</strong> 30 pés</li>
+              <li><strong>Produtor:</strong> Sítio Boa Esperança</li>
+              <li><strong>Cidade:</strong> Ibiúna (SP)</li>
+              <li><strong>Validade:</strong> 14/12/2026</li>
+            </ul>
+            <a href="fale-conosco.html?assunto=Doação: alface crespa" class="btn btn-green">Quero receber</a>
+          </article>
+
+          <article class="card doacao">
+            <img src="img/doacoes/tomate.jpg" alt="Tomates maduros" width="800" height="600" loading="lazy">
+            <h3>Tomate</h3>
+            <ul>
+              <li><strong>Quantidade:</strong> 15 kg</li>
+              <li><strong>Produtor:</strong> Fazenda Santa Clara</li>
+              <li><strong>Cidade:</strong> Mogi das Cruzes (SP)</li>
+              <li><strong>Validade:</strong> 16/12/2026</li>
+            </ul>
+            <a href="fale-conosco.html?assunto=Doação: tomate" class="btn btn-green">Quero receber</a>
+          </article>
+
+          <article class="card doacao">
+            <img src="img/doacoes/cenoura.jpg" alt="Cenouras frescas" width="800" height="600" loading="lazy">
+            <h3>Cenoura</h3>
+            <ul>
+              <li><strong>Quantidade:</strong> 20 kg</li>
+              <li><strong>Produtor:</strong> Sítio São José</li>
+              <li><strong>Cidade:</strong> Piedade (SP)</li>
+              <li><strong>Validade:</strong> 18/12/2026</li>
+            </ul>
+            <a href="fale-conosco.html?assunto=Doação: cenoura" class="btn btn-green">Quero receber</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <strong>🌱 AgroConecta</strong>
+        <p>Projeto alinhado à ODS 2: Fome Zero e Agricultura Sustentável.</p>
+        <p>Grupo 32 · FIAP 2026</p>
+      </div>
+      <ul class="rodape-integrantes" aria-label="Integrantes do grupo">
+          <li>Paulo Henrique Ferreira Leite (RM 576170)</li>
+          <li>Paulo Henrik Moura da Silva (RM 575374)</li>
+          <li>Paulo Sérgio Alves de Oliveira (RM 574413)</li>
+          <li>Rafael Coutinho Timoteo (RM 576366)</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

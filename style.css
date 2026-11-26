@@ -1,0 +1,345 @@
+/* =========================================================
+   AgroConecta · Sprint 4
+   Um único arquivo de estilo para as 5 páginas.
+   Mantém as cores e o conteúdo da Sprint 3.
+   ========================================================= */
+
+/* ---------- 1. Cores e fontes ---------- */
+:root {
+  --cream: #F1F8F4;
+  --sage: #BDDDCA;
+  --green-soft: #61A684;
+  --green: #2D6A4F;
+  --green-deep: #1F4636;
+  --green-dark: #0E2019;
+  --white: #FFFFFF;
+  --gray: #4F6158;
+  --border: #DCE9DF;
+  --error: #B3261E;
+  --error-bg: #FDECEA;
+  --success: #1B5E20;
+  --success-bg: #E3F4E6;
+  --amber: #8A5A00;
+  --amber-bg: #FFF1D6;
+
+  --font: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(14, 32, 25, 0.06);
+}
+
+/* ---------- 2. Base ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--green-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main { flex: 1; }
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+h1, h2, h3 { line-height: 1.2; color: var(--green-deep); }
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -1px; margin-bottom: 18px; }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); margin-bottom: 14px; }
+h3 { font-size: 1.15rem; margin-bottom: 8px; }
+
+.container { width: 90%; max-width: 1120px; margin: 0 auto; }
+
+/* Foco visível para quem navega pelo teclado */
+:focus-visible { outline: 3px solid var(--green-soft); outline-offset: 3px; border-radius: 6px; }
+
+/* Texto só para leitores de tela */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.pular-link {
+  position: absolute; left: 1rem; top: -100px; z-index: 100;
+  background: var(--sage); color: var(--green-dark);
+  padding: 10px 16px; border-radius: 10px; font-weight: 600;
+}
+.pular-link:focus { top: 1rem; }
+
+/* ---------- 3. Cabeçalho e menu ---------- */
+.cabecalho {
+  background: var(--green-dark);
+  border-bottom: 2px solid var(--green-soft);
+  position: sticky; top: 0; z-index: 50;
+}
+
+.navbar {
+  min-height: 72px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  position: relative;
+}
+
+.logo { font-size: 1.35rem; font-weight: 700; color: var(--green-soft); }
+
+.menu-botao {
+  display: none;
+  background: transparent; color: var(--cream);
+  border: 2px solid var(--green-soft); border-radius: 10px;
+  padding: 6px 12px; font: inherit; font-weight: 600; cursor: pointer;
+}
+
+.menu { display: flex; align-items: center; gap: 26px; }
+.menu a { font-size: 0.95rem; font-weight: 500; color: var(--cream); transition: color 0.2s; }
+.menu a:hover { color: var(--green-soft); }
+.menu a[aria-current="page"] {
+  color: var(--green-soft); font-weight: 600;
+  border-bottom: 2px solid var(--green-soft); padding-bottom: 2px;
+}
+
+/* ---------- 4. Botões e etiquetas ---------- */
+.btn {
+  display: inline-block;
+  background: var(--sage); color: var(--green-deep);
+  padding: 12px 22px; border-radius: 12px; border: none;
+  font: inherit; font-weight: 600; cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn:hover { transform: translateY(-2px); background: var(--green-soft); color: var(--white); }
+.btn-green { background: var(--green); color: var(--white); }
+.btn-green:hover { background: var(--green-deep); }
+.btn-pequeno { padding: 8px 14px; font-size: 0.9rem; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.link { color: var(--green); font-weight: 600; padding: 12px 4px; }
+.link:hover { text-decoration: underline; }
+
+.tag {
+  display: inline-block;
+  background: #E1EEE5; color: var(--green);
+  padding: 6px 14px; border-radius: 30px;
+  font-size: 0.85rem; font-weight: 600; margin-bottom: 16px;
+}
+
+.selo {
+  display: inline-block; font-size: 0.75rem; font-weight: 600;
+  padding: 3px 10px; border-radius: 999px;
+  background: #E1EEE5; color: var(--green);
+}
+.selo-ambar { background: var(--amber-bg); color: var(--amber); }
+
+/* ---------- 5. Seções ---------- */
+section { padding: 72px 0; }
+
+.secao-titulo { max-width: 700px; margin: 0 auto 40px; text-align: center; }
+.secao-titulo p, .texto-apoio { color: var(--gray); }
+
+.secao-clara { background: #E6F1E9; }
+.secao-branca { background: var(--white); }
+
+.topo-pagina { padding: 56px 0 32px; }
+.topo-pagina p { color: var(--gray); max-width: 640px; }
+
+/* Hero da Home */
+.hero { padding: 80px 0; background: linear-gradient(135deg, var(--cream), #E4F1E9); }
+.hero-conteudo { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 50px; }
+.hero-destaque { font-size: 1.2rem; font-weight: 600; color: var(--green); margin-bottom: 12px; }
+.hero-texto { color: var(--gray); margin-bottom: 26px; max-width: 560px; }
+.hero-botoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.hero-imagem img { width: 100%; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); }
+
+/* Faixa de diferenciais */
+.faixa { background: var(--green-deep); color: var(--cream); padding: 22px 0; }
+.faixa-conteudo { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+.faixa-conteudo p { color: var(--sage); }
+.faixa-conteudo ul { display: flex; gap: 24px; flex-wrap: wrap; font-weight: 600; font-size: 0.9rem; }
+
+/* Vídeo */
+.video-box {
+  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+  border-radius: 16px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+.video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-link { margin-top: 18px; text-align: center; color: var(--gray); font-size: 0.95rem; }
+.video-link a { color: var(--green); font-weight: 600; text-decoration: underline; }
+
+/* ---------- 6. Cards e grades ---------- */
+.grade { display: grid; gap: 22px; }
+.grade-3 { grid-template-columns: repeat(3, 1fr); }
+.grade-2 { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+  background: var(--white);
+  padding: 26px; border-radius: 20px;
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07); }
+.card p { color: var(--gray); font-size: 0.95rem; }
+
+.icone {
+  width: 52px; height: 52px; display: grid; place-items: center;
+  background: #E5F1E9; border-radius: 14px; font-size: 1.6rem; margin-bottom: 18px;
+}
+
+/* Indicadores (impacto) */
+.metricas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.metrica { padding: 24px; border-radius: 20px; }
+.metrica strong { display: block; font-size: 2rem; margin-bottom: 6px; }
+.metrica-escura { background: var(--green-deep); color: var(--cream); }
+.metrica-verde { background: var(--green); color: var(--white); }
+.metrica-clara { background: var(--sage); color: var(--green-dark); }
+.metrica-suave { background: #D4EDDE; color: var(--green-dark); }
+.impacto { display: grid; grid-template-columns: 0.9fr 1.1fr; align-items: center; gap: 50px; }
+.destaque-borda { border-left: 4px solid var(--green-soft); padding-left: 14px; font-weight: 600; margin-top: 16px; }
+
+/* ---------- 7. Filtros (Safra e Produtos) ---------- */
+.filtros-botoes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.filtro-btn {
+  background: var(--white); color: var(--gray);
+  border: 1px solid var(--border); border-radius: 999px;
+  padding: 8px 16px; font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+}
+.filtro-btn:hover { background: #E6F1E9; }
+.filtro-btn[aria-pressed="true"] { background: var(--green); color: var(--white); border-color: var(--green); }
+
+.card-rodape {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  border-top: 1px solid var(--border); padding-top: 14px; margin-top: 14px; font-size: 0.85rem;
+}
+.local { color: var(--green); font-size: 0.85rem; font-weight: 500; margin-bottom: 8px; }
+.quantidade { background: #E6F1E9; color: var(--green); font-weight: 700; padding: 3px 10px; border-radius: 8px; }
+
+/* ---------- 8. Catálogo (Produtos) ---------- */
+.catalogo { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 28px; align-items: start; }
+
+.barra-busca {
+  display: grid; grid-template-columns: 2fr 1fr; gap: 14px;
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px; margin-bottom: 18px;
+}
+
+.contador { color: var(--gray); font-weight: 500; margin-bottom: 14px; }
+
+.lista-produtos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+
+.produto { display: flex; flex-direction: column; }
+.produto-topo { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.produto-emoji { font-size: 2.2rem; line-height: 1; }
+.produto h3 { margin-top: 10px; }
+.precos { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+.preco { font-size: 1.35rem; font-weight: 700; color: var(--green); }
+.preco-antigo { color: var(--gray); font-size: 0.85rem; text-decoration: line-through; }
+.produto-acao { display: flex; gap: 8px; align-items: center; margin-top: auto; }
+.produto-acao input {
+  width: 72px; padding: 8px; border: 1px solid #C9D9CE; border-radius: 10px; font: inherit;
+}
+
+.vazio {
+  grid-column: 1 / -1; text-align: center; color: var(--gray);
+  background: var(--white); border: 2px dashed var(--border); border-radius: var(--radius); padding: 32px;
+}
+
+.pedido {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px; box-shadow: var(--shadow); position: sticky; top: 96px;
+}
+.pedido h2 { font-size: 1.35rem; }
+.itens-pedido li {
+  display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.92rem;
+}
+.btn-remover {
+  background: transparent; border: 1px solid var(--error); color: var(--error);
+  border-radius: 8px; padding: 2px 8px; font: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+}
+.resumo { margin: 14px 0; display: grid; gap: 6px; }
+.resumo div { display: flex; justify-content: space-between; gap: 8px; }
+.resumo dt { color: var(--gray); }
+.resumo dd { font-weight: 700; }
+.resumo .total dd { color: var(--green); font-size: 1.2rem; }
+.resumo .economia dd { color: var(--success); }
+
+/* ---------- 9. Formulário ---------- */
+.form {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px; box-shadow: var(--shadow); display: grid; gap: 18px;
+}
+.campo { display: flex; flex-direction: column; gap: 6px; }
+.campo label { font-weight: 600; color: var(--green-deep); }
+.obrigatorio { color: var(--error); }
+.campo input, .campo select, .campo textarea {
+  font: inherit; color: var(--green-dark);
+  padding: 10px 12px; border: 1px solid #C9D9CE; border-radius: 10px; background: var(--white);
+}
+.campo textarea { min-height: 140px; resize: vertical; }
+.campo input:focus, .campo select:focus, .campo textarea:focus { border-color: var(--green); }
+.campo [aria-invalid="true"] { border-color: var(--error); background: #FFF8F7; }
+.dica { font-size: 0.85rem; color: var(--gray); }
+.dica-limite { color: var(--error); font-weight: 600; }
+.erro { font-size: 0.88rem; font-weight: 600; color: var(--error); min-height: 1.3em; }
+
+.mensagem { border-radius: 12px; padding: 14px 16px; font-weight: 600; }
+.mensagem:empty { display: none; }
+.mensagem-sucesso { background: var(--success-bg); color: var(--success); border: 1px solid #7BC48A; }
+.mensagem-erro { background: var(--error-bg); color: var(--error); border: 1px solid #E8A39E; }
+.mensagem-info { background: #E6F1E9; color: var(--green-deep); border: 1px solid var(--sage); }
+
+/* ---------- 10. Doações ---------- */
+.doacao img { aspect-ratio: 4 / 3; height: auto; object-fit: cover; border-radius: 12px; margin-bottom: 14px; width: 100%; }
+.doacao ul { color: var(--gray); font-size: 0.92rem; margin-bottom: 16px; display: grid; gap: 2px; }
+.doacao { display: flex; flex-direction: column; }
+.doacao .btn { margin-top: auto; text-align: center; }
+
+/* ---------- 11. Rodapé ---------- */
+.rodape { background: #091710; color: var(--sage); padding: 32px 0; font-size: 0.88rem; }
+.rodape-conteudo { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.rodape strong { color: var(--cream); font-size: 1.05rem; display: block; margin-bottom: 4px; }
+.rodape a { color: var(--green-soft); }
+.rodape-integrantes { display: grid; gap: 2px; }
+
+/* ---------- 12. Responsividade ---------- */
+@media (max-width: 900px) {
+  .catalogo { grid-template-columns: minmax(0, 1fr); }
+  .pedido { position: static; }
+}
+
+@media (max-width: 800px) {
+  .hero-conteudo, .impacto { grid-template-columns: 1fr; }
+  .grade-3, .grade-2 { grid-template-columns: 1fr; }
+  .hero { padding: 56px 0; }
+}
+
+@media (max-width: 760px) {
+  /* Menu vira botão ☰ no celular */
+  .menu-botao { display: inline-block; }
+  .menu {
+    display: none;
+    position: absolute; top: 100%; left: -6%; right: -6%;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--green-dark); border-bottom: 2px solid var(--green-soft);
+    padding: 8px 6%;
+  }
+  .menu.aberto { display: flex; }
+  .menu a { padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+  .menu a[aria-current="page"] { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+
+  section { padding: 56px 0; }
+  .barra-busca { grid-template-columns: 1fr; }
+  .lista-produtos { grid-template-columns: 1fr; }
+  .metricas { grid-template-columns: 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- 13. Utilitários ---------- */
+.container-estreito { max-width: 900px; }
+.sem-topo { padding-top: 0; }
+.h3-card { font-size: 1.15rem; margin: 10px 0 4px; }
+[hidden] { display: none !important; }
