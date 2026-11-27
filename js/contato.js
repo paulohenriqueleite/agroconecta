@@ -126,6 +126,14 @@ Object.keys(regras).forEach(function (nomeCampo) {
   formulario.elements[nomeCampo].addEventListener('blur', function () {
     validarCampo(nomeCampo);
   });
+
+  // Se o campo já está com erro, confere de novo enquanto a pessoa digita,
+  // assim a mensagem nunca fica desatualizada
+  formulario.elements[nomeCampo].addEventListener('input', function () {
+    if (formulario.elements[nomeCampo].getAttribute('aria-invalid') === 'true') {
+      validarCampo(nomeCampo);
+    }
+  });
 });
 
 // ---------- Contador de caracteres da mensagem ----------
